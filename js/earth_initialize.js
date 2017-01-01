@@ -11,4 +11,8 @@
        
 
         earth.setView([51.505, 0], 2);
+        reformat_sheet_json();
       }
+      
+      
+      

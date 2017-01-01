@@ -38,9 +38,7 @@ var output_json = "{";// Initiate output JSON
 		output_json = output_json+"}";
 		
 		//console.log(output_json);
-		var json = JSON.parse(output_json);
-		return json;
-		console.log(json);
+		//console.log(json);
  	});
 
 
