@@ -3,7 +3,7 @@
 // link to the sheet : https://docs.google.com/spreadsheets/d/1cAti72QcHYbIuvufWIMWefHUV44Bobv3iXFkRVtpgJ0/edit#gid=1243367084
 // link to google form : https://docs.google.com/a/asu.edu/forms/d/1c-Sn0e3CZif1H8tWCmMPWAcb3z0Rl_oFUsw04DTKspQ/edit
 // URL of the google sheet
-function reformat_sheet_json(){
+function load_and_reformat_sheet_json(func){
 var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/1/public/basic?alt=json";
 var output_json = "{";// Initiate output JSON
 
@@ -26,24 +26,19 @@ var output_json = "{";// Initiate output JSON
 		 	
 		 	//<-----converting column_data to string------>
 		 	
-				//$.each(row_item,function(categorie,item) // penetrate each row
-		 		//	{
-		 		//		console.log(item); 
-		 				
-		 		//	});
-		 	
  
 		});
 		output_json = output_json.substring(0, output_json.length - 1);
 		output_json = output_json+"}";
+		var json = JSON.parse(output_json);
 		
-		//console.log(output_json);
-		//console.log(json);
+		//return JSON object to the given callback function
+		func(json);
+		
+		
  	});
 
-
- //var row_item = JSON.parse("{\""+string+"\"}");
- }
+}
  
  
  
