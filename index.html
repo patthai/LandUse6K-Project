@@ -1,9 +1,25 @@
-<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 
-<div id="report"></div>
+<script src="js/jquery.min.js"></script>
+<script src="js/sheetrock.min.js"></script>
+<script src="Semantic-UI/semantic.min.js"></script>
+<link rel="stylesheet" href="Semantic-UI/semantic.min.css">
 
 
-<script type="text/javascript" src="js/loading_googlesheet.js"></script>
+// Define spreadsheet URL.
+<script>
+var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1cAti72QcHYbIuvufWIMWefHUV44Bobv3iXFkRVtpgJ0/edit#gid=0';
+</script>
 
 
- 
+
+
+
+<table id="statistics" class="ui celled padded table"></table>
+
+
+<script>
+// Load an entire worksheet.
+$('#statistics').sheetrock({
+  url: mySpreadsheet
+});
+</script>
