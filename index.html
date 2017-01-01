@@ -9,7 +9,7 @@
 
  
  // Make sure it is public or set to Anyone with link can view 
- var url = "https://spreadsheets.google.com/feeds/worksheets/" + spreadsheetID + "/public/basic?alt=json";
+ var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/1/public/basic?alt=json";
  
  $.getJSON(url, function(data) {
  console.log(data);
