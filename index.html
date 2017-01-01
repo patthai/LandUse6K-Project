@@ -1,25 +1,64 @@
-
+<!-- external library -->
 <script src="js/jquery.min.js"></script>
+
+<!-- reformat JSON from google sheet-->
+<script src="js/reformat_json.js"></script>
+
+<!-- sheetrock -->
 <script src="js/sheetrock.min.js"></script>
+
+<!-- sementic -->
 <script src="Semantic-UI/semantic.min.js"></script>
+
+<!-- earth -->
+<script src="http://www.webglearth.com/v2/api.js"></script>
+<script src="js/earth_initialize.js"></script>
+
+
+
 <link rel="stylesheet" href="Semantic-UI/semantic.min.css">
 
+<!-- Style -->
+<style>
+      #earth_div{top: 0; right: 0; bottom: 0; left: 0; position: absolute !important;}
+</style>
 
-// Define spreadsheet URL.
+
+
+<!-- Declaring datasoucre -->
 <script>
-var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1cAti72QcHYbIuvufWIMWefHUV44Bobv3iXFkRVtpgJ0/edit#gid=0';
+// ID of the Google Spreadsheet
+var spreadsheetID = "1cAti72QcHYbIuvufWIMWefHUV44Bobv3iXFkRVtpgJ0" ;
+
+
+
+reformat_sheet_json();
 </script>
 
 
 
+<body onload="initialize()">
+		<div class="ui grid">
+			
+			<!-- data-table -->
+  			<div  class="eight wide column" style="padding-top: 200px; padding-bottom: 200px;">
+			<table id="statistics" class="ui celled padded table"></table>
+  			</div>
+  			
+  			<!-- earth -->
+  			<div  class="eight wide column" style="padding-top: 200px; padding-bottom: 200px;">	
+  			<div id="earth_div"></div>
+ 			 </div>
+
+		</div>
+</body>
 
 
-<table id="statistics" class="ui celled padded table"></table>
 
-
+<!-- Implementing Sheetrock -->
 <script>
-// Load an entire worksheet.
-$('#statistics').sheetrock({
-  url: mySpreadsheet
-});
+var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/'+spreadsheetID+'/edit#gid=0';
+$('#statistics').sheetrock({url: mySpreadsheet});
 </script>
+
+
