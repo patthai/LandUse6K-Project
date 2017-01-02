@@ -7,15 +7,16 @@ function table_initialize()
         	function add_to_table(output_json) //get JSON from google sheet via load_and_reformat_sheet_json
       			{
             		
-            		table_output = "<table id=\"table\" class=\"ui celled padded table\"><thead><tr>";	//table header
+            		//table header
+            		table_output = "<table id=\"table\" class=\"ui celled padded table\"><thead><tr>";
             		$.each(output_json.object[0],function(i,item)// table item header
 		 				{
 		 				 	table_output = table_output + "<th>" + i + "</th>";
 		 				});
 		 					table_output = table_output + "</tr></thead>";
 					
-					
-					for (i = 0; i< output_json.object.length; i++) //content
+					//content
+					for (i = 0; i< output_json.object.length; i++)
       								{
 										var count = 1; //count 
 										var num_parameter = Object.keys(output_json.object[0]).length;										
@@ -28,7 +29,7 @@ function table_initialize()
 		 										}
 		 									table_output = table_output + "<td>"+row_data+"</td>";
 		 									
-		 									if (count == num_parameter)// check if this is the endning of the table
+		 									if (count == num_parameter)// check if this is the endning of the cell
 		 										{
 		 											table_output = table_output + "</tr>";
 		 										}
@@ -37,8 +38,10 @@ function table_initialize()
 
 		 									});
       								}
+      								$(".table").remove();
       								table_output = table_output + "</table>";
-      								$(".table_place").append(table_output);	
+      								console.log(table_output);
+      								$('#table_div').append(table_output);	
 									//console.log(table_output);
 
       			}
