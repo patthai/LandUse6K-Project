@@ -5,7 +5,7 @@
 // URL of the google sheet
 function load_and_reformat_sheet_json(func){
 var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/1/public/basic?alt=json";
-var output_json = "{";// Initiate output JSON
+var output_json = "{\"object\":[";// Initiate output JSON
 
  $.getJSON(url, function(data) // Get JSON from google sheet
  	{
@@ -13,7 +13,7 @@ var output_json = "{";// Initiate output JSON
 		 $.each(data.feed.entry,function(i,column_data) // penetrate each row
 		 	
 		 {
-		   output_json = output_json+"\"object"+i+"\": {";
+		   output_json = output_json+"{";
 		   
 		
 		 	//<-----converting column_data to string------>
@@ -29,7 +29,9 @@ var output_json = "{";// Initiate output JSON
  
 		});
 		output_json = output_json.substring(0, output_json.length - 1);
-		output_json = output_json+"}";
+		output_json = output_json+"]}";
+		
+		console.log(output_json);
 		var json = JSON.parse(output_json);
 		
 		//return JSON object to the given callback function

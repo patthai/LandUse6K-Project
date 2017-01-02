@@ -4,22 +4,20 @@
 <!-- reformat JSON from google sheet-->
 <script src="js/load_and_reformat_json.js"></script>
 
-<!-- sheetrock -->
-<script src="js/sheetrock.min.js"></script>
-
 <!-- Declaring datasoucre -->
 <script>var spreadsheetID = "1cAti72QcHYbIuvufWIMWefHUV44Bobv3iXFkRVtpgJ0" ;</script>
 
 <!-- sementic -->
 <script src="Semantic-UI/semantic.min.js"></script>
+<link rel="stylesheet" href="Semantic-UI/semantic.min.css">
+
+<!-- table -->
+<script src="js/table_initialize.js"></script>
 
 <!-- earth -->
-<script src="http://www.webglearth.com/v2/api.js"></script>
-<script src="js/earth_initialize.js"></script>
+<!-- earth <script src="http://www.webglearth.com/v2/api.js"></script>
+<script src="js/earth_initialize.js"></script>-->
 
-
-
-<link rel="stylesheet" href="Semantic-UI/semantic.min.css">
 
 <!-- Style -->
 <style>
@@ -30,14 +28,14 @@
 
 
 
-
-
-<body onload="initialize()">
+<body>
 		<div class="ui grid">
 			
 			<!-- data-table -->
   			<div  class="eight wide column" style="padding-top: 200px; padding-bottom: 200px;">
-			<table id="statistics" class="ui celled padded table"></table>
+			<table id="table" class="ui celled padded table"></table>
+			<!-- button -->
+			<center><button class="ui primary button" button onclick="table_initialize()">Reload</button>
   			</div>
   			
   			<!-- earth -->
@@ -48,12 +46,10 @@
 		</div>
 </body>
 
-
-
-<!-- Implementing Sheetrock -->
 <script>
-var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/'+spreadsheetID+'/edit#gid=0';
-$('#statistics').sheetrock({url: mySpreadsheet});
+ 		//earth_initialize();
+ 		table_initialize();
 </script>
+
 
 
