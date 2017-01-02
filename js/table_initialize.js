@@ -29,7 +29,7 @@ function table_initialize()
 		 										}
 		 									table_output = table_output + "<td>"+row_data+"</td>";
 		 									
-		 									if (count == num_parameter)// check if this is the endning of the cell
+		 									if (count == num_parameter)// check if this is the ending of the cell
 		 										{
 		 											table_output = table_output + "</tr>";
 		 										}
@@ -38,11 +38,11 @@ function table_initialize()
 
 		 									});
       								}
+      								//export table to html
       								$(".table").remove();
       								table_output = table_output + "</table>";
-      								console.log(table_output);
       								$('#table_div').append(table_output);	
-									//console.log(table_output);
+									
 
       			}
       		

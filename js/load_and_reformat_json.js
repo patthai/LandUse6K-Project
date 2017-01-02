@@ -31,7 +31,9 @@ var output_json = "{\"object\":[";// Initiate output JSON
 		output_json = output_json.substring(0, output_json.length - 1);
 		output_json = output_json+"]}";
 		
-		console.log(output_json);
+		//console.log(output_json); 
+		//EXPORT JSON TEST
+			
 		var json = JSON.parse(output_json);
 		
 		//return JSON object to the given callback function
