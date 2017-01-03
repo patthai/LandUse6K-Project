@@ -9,7 +9,8 @@ var output_json = "{\"object\":[";// Initiate output JSON
 
  $.getJSON(url, function(data) // Get JSON from google sheet
  	{
-	
+		
+		console.log(data);
 		 $.each(data.feed.entry,function(i,column_data) // penetrate each row
 		 	
 		 {
