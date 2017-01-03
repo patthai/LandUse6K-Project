@@ -18,9 +18,9 @@
 <script src="https://cesiumjs.org/Cesium/Build/Cesium/Cesium.js"></script>
 <script src="js/earth_initialize.js"></script>
 <style> 
-		@import url(https://cesiumjs.org/Cesium/Build/Cesium/Widgets/widgets.css);
+		@import url(css/widgets_modified.css);
 		html, body, #cesiumContainer {
-          width: 100%; height: 80%; margin: 0; padding: 0; overflow: hidden;
+          width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
       }
 </style>
 
@@ -36,12 +36,18 @@
 			<div id="table_div"></div>
 			<!-- button -->
 			<center><button class="ui primary button" button onclick="table_initialize()">Reload table</button>
-			<center><button class="ui primary button" button onclick="earth_initialize.load_earth_data()">Reload earth</button>
+			<center><button class="ui primary button" button onclick="earth_initialize()">Reload earth</button>
   			</div>
   			
   			<!-- earth -->
   			<div  class="eight wide column" style="padding-top: 10px; padding-bottom:0px;">	
   			 <div id="cesiumContainer"></div>
+  			 <div id="loadingOverlay"><h1>Loading...</h1></div>
+<div id="toolbar">
+<div id="terrainMenu"></div>
+<div id="zoomButtons"></div>
+<div id="sampleButtons"></div>
+  			 
  			 </div>
 
 		</div>
