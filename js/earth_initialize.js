@@ -23,29 +23,39 @@ function earth_initialize()
         	//////////////////////////MODULE///////////////////////
         	
         	//load_earth_data from database
-        	earth_initialize.load_earth_data = function load_earth_data(json) 
+        	earth_initialize.load_earth_data = function load_earth_data() 
       		{        
-				//console.log(json);
-				viewer.entities.removeAll();//clear all data
-				for (i = 0; i< json.object.length; i++)//loop through JSON
+				load_and_reformat_sheet_json(load_data);
+				function load_data(json)
+				{
+				
+					viewer.entities.removeAll();//clear all data
+					for (i = 0; i< json.object.length; i++)//loop through JSON
 					{
 					
 				
 					
-					if(json.object[i].type == "event"){create_event(json);}
+						if(json.object[i].type == "event")
+						{
+							var new_data_name = json.object[i].name;
+							var new_location = json.object[i].location.split(',');
+							console.log(new_location);
+							create_event(new_data_name, new_location);
+						}
 					
 					//console.log(json.object[i].type);
 					
 					}
+				}
 	
 			}
 			
 			//load_earth_data from database
-        	function create_event()
+        	function create_event(new_data_name, new_location)
         		{
         		var redPolygon = viewer.entities.add(
-        							{name : 'Red polygon on surface', 
-        							polygon : {hierarchy : Cesium.Cartesian3.fromDegreesArray([]),
+        							{name : new_data_name, 
+        							polygon : {hierarchy : Cesium.Cartesian3.fromDegreesArray(new_location),
         							material : Cesium.Color.RED}
 									});
 				}
@@ -55,8 +65,8 @@ function earth_initialize()
         	////////////////////Initial Command/////////////////////
         	////////////////////Initial Command/////////////////////
         
+        	earth_initialize.load_earth_data();
         	
-        	load_and_reformat_sheet_json(earth_initialize.load_earth_data);
         	
         	
         	
