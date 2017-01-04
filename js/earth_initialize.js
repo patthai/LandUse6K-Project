@@ -5,7 +5,7 @@ function earth_initialize()
 			imageryProviders.splice(0, 3);
 			imageryProviders.splice(3, 3);	
 			
-			
+			//modify earth widget
 			var selectedImageryProviderIndex = 0;
         	var viewer = new Cesium.Viewer('cesiumContainer', 
         					{
@@ -14,26 +14,49 @@ function earth_initialize()
         					vrButton: true,
         					
         					});
-        	console.log('hello');
         	
         	
         	
+        	//////////////////////////MODULE///////////////////////
+        	//////////////////////////MODULE///////////////////////
+        	//////////////////////////MODULE///////////////////////
+        	//////////////////////////MODULE///////////////////////
         	
-        	//load_object from database
-        	var redPolygon = viewer.entities.add({
-    			name : 'Red polygon on surface',
-    			polygon : {hierarchy : Cesium.Cartesian3.fromDegreesArray
-    													([-115.0, 37.0,
-                                                        -115.0, 32.0,
-                                                        -107.0, 33.0,
-                                                        -102.0, 31.0,
-                                                        -102.0, 35.0]),
-        							material : Cesium.Color.RED
-    								}
-
-
+        	//load_earth_data from database
+        	earth_initialize.load_earth_data = function load_earth_data(json) 
+      		{        
+				//console.log(json);
+				viewer.entities.removeAll();//clear all data
+				for (i = 0; i< json.object.length; i++)//loop through JSON
+					{
+					
+				
+					
+					if(json.object[i].type == "event"){create_event(json);}
+					
+					//console.log(json.object[i].type);
+					
+					}
+	
+			}
+			
+			//load_earth_data from database
+        	function create_event()
+        		{
+        		var redPolygon = viewer.entities.add(
+        							{name : 'Red polygon on surface', 
+        							polygon : {hierarchy : Cesium.Cartesian3.fromDegreesArray([]),
+        							material : Cesium.Color.RED}
 									});
-			//load_object from database
+				}
+        	
+        	////////////////////Initial Command/////////////////////
+        	////////////////////Initial Command/////////////////////
+        	////////////////////Initial Command/////////////////////
+        	////////////////////Initial Command/////////////////////
+        
+        	
+        	load_and_reformat_sheet_json(earth_initialize.load_earth_data);
         	
         	
         	
