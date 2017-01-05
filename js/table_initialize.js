@@ -1,6 +1,11 @@
-function table_initialize() 
+function table() 
       {
-        	var table_output;//table_output
+        	//INITIATION!
+        	//INITIATION!
+        	//INITIATION!
+        	//INITIATION!
+        	
+        	var table_output;//table_output for HTML
         	//call load&reformat JSON function and give add_to earth_function a callback
         	load_and_reformat_sheet_json(add_to_table);
         	//wait for callback  by load_and_reformat_sheet_json function
@@ -27,11 +32,11 @@ function table_initialize()
 		 										{
 		 											table_output = table_output +"<tr>";
 		 										}
-		 									table_output = table_output + "<td>"+row_data+"</td>";
+		 									table_output = table_output + "<td contenteditable=\"true\" id=\"editor\">"+row_data+"</td>";
 		 									
 		 									if (count == num_parameter)// check if this is the ending of the cell
 		 										{
-		 											table_output = table_output + "</tr>";
+		 											table_output = table_output +"</tr>";
 		 										}
 		 									
 		 									count++;
@@ -45,10 +50,24 @@ function table_initialize()
 									
 
       			}
-      		
+      			
+      		//EDITING TABLE
+      		//EDITING TABLE
+      		//EDITING TABLE
+			//EDITING TABLE
+
+        	document.getElementById("editor").addEventListener("input", function() { alert("input event fired");}, false);
+			
+			table.JSON_save = function JSON_save()
+				{
+			 	console.log(output_json);
+				} 
+			
+			
+
+
         
       }
+
       
-      
-      
-      								
+						

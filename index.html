@@ -29,28 +29,60 @@
 
 
 <body>
-		<div class="ui grid">
+		<!-- --------- Menu --------- -->
+		<div class="ui fixed inverted menu">
+    		<div class="ui container">
+			<a href="#" class="header item"><img class="logo" src="assets/images/logo.png">Project Name</a>
+   			</div>
+  		</div>
+		<!-- --------- Main UI --------- -->
+  		
+  		<div class="ui fixed grid" style="height: 100%;padding-top: 52.625;">
 			
-			<!-- data-table -->
-  			<div  class="eight wide column" style="padding-top: 200px; padding-bottom: 200px;">
-			<div id="table_div"></div>
-			<!-- button -->
-			<center><button class="ui primary button" button onclick="table_initialize(),earth_initialize.load_earth_data()">Reload</button>
-
-  			</div>
+				<!-- --------- Data-Table --------- -->
+  				<div  class="eight wide column">
+  				
+  					<!-- --------- Tab_1 UI--------- -->
+  					<div class="ui top attached tabular menu" id="tab_1">
+  						<a class="active item" data-tab="first" data-vivaldi-spatnav-clickable="1">First</a>
+ 						<a class="item" data-tab="second" data-vivaldi-spatnav-clickable="1">Second</a>
+ 						<a class="item" data-tab="third" data-vivaldi-spatnav-clickable="1">Third</a>
+					</div>
+					
+					<div class="ui bottom attached active tab segment" data-tab="first">
+  						<div id="table_div"></div>
+						<!-- button -->
+						<button class="ui primary button" button onclick="table(),earth_initialize.load_earth_data()">Reload</button>
+						<button class="ui primary button" button onclick="table(),table.JSON_save()">Save</button>
+						
+					</div>
+					<div class="ui bottom attached tab segment" data-tab="second">
+  						<!-- --------- Data-Table <iframe width='100%' height='1000' frameborder='0' src='https://docs.google.com/spreadsheets/d/1cAti72QcHYbIuvufWIMWefHUV44Bobv3iXFkRVtpgJ0/edit'></iframe>--------- -->
+					</div>
+					<div class="ui bottom attached tab segment" data-tab="third">
+ 						 Third
+					</div>	
+					
+				</div>
   			
-  			<!-- earth -->
-  			<div  class="eight wide column" style="padding-top: 10px; padding-bottom:0px;">	
-  			 <div id="cesiumContainer"></div>
-  			 
- 			 </div>
+  				<!-- --------- Earth --------- -->
+  				<div  class="eight wide column">	
+  			 		<div id="cesiumContainer"></div>
+ 				</div>
 
-		</div>
+			</div>
+  		</div>
+
+	
 </body>
 
 <script>
- 		earth_initialize();
- 		table_initialize();
+
+ 		//earth_initialize();
+ 		table();
+ 		
+ 		// Tab_1 UI
+ 		$('#tab_1.menu .item').tab();
  		
 </script>
 

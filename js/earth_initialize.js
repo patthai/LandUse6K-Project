@@ -32,18 +32,11 @@ function earth_initialize()
 					viewer.entities.removeAll();//clear all data
 					for (i = 0; i< json.object.length; i++)//loop through JSON
 					{
+						var new_data_name = json.object[i].name;
+						var new_location = json.object[i].location.split(',');
 					
-				
+						if(json.object[i].type == "event"){create_event(new_data_name, new_location);}
 					
-						if(json.object[i].type == "event")
-						{
-							var new_data_name = json.object[i].name;
-							var new_location = json.object[i].location.split(',');
-							console.log(new_location);
-							create_event(new_data_name, new_location);
-						}
-					
-					//console.log(json.object[i].type);
 					
 					}
 				}
