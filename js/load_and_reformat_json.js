@@ -39,9 +39,10 @@ var found_semicolon = "false";
   						}
   					}
 				}
+			item_string = item_string.replace(/,/g,', ');
 
 		 	output_json = output_json+"\""+item_string+"\"},";
-		 	
+		 	console.log(output_json);
 		 	
 		 	//<-----converting column_data to string------>
 		 	

@@ -1,3 +1,5 @@
+<html ng-app="LandUse6K">
+<header>
 <!-- external library -->
 <script src="js/jquery.min.js"></script>
 
@@ -17,6 +19,8 @@
 <!-- earth -->
 <script src="https://cesiumjs.org/Cesium/Build/Cesium/Cesium.js"></script>
 <script src="js/earth_initialize.js"></script>
+</header>
+
 <style> 
 		@import url(css/widgets_modified.css);
 		html, body, #cesiumContainer {
@@ -57,7 +61,7 @@
 						
 					</div>
 					<div class="ui bottom attached tab segment" data-tab="second">
-  						<!-- --------- Data-Table <iframe width='100%' height='1000' frameborder='0' src='https://docs.google.com/spreadsheets/d/1cAti72QcHYbIuvufWIMWefHUV44Bobv3iXFkRVtpgJ0/edit'></iframe>--------- -->
+  						<!-- <iframe width='100%' height='1000' frameborder='0' src='https://docs.google.com/spreadsheets/d/1cAti72QcHYbIuvufWIMWefHUV44Bobv3iXFkRVtpgJ0/edit'></iframe> --!>
 					</div>
 					<div class="ui bottom attached tab segment" data-tab="third">
  						 Third
@@ -75,14 +79,18 @@
 
 	
 </body>
+</html>
+
 
 <script>
+
+		// Tab_1 UI
+ 		$('#tab_1.menu .item').tab();
 
  		//earth_initialize();
  		table();
  		
- 		// Tab_1 UI
- 		$('#tab_1.menu .item').tab();
+ 	
  		
 </script>
 
