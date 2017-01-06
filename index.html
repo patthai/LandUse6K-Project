@@ -7,7 +7,7 @@
 <script src="js/load_and_reformat_json.js"></script>
 
 <!-- Declaring datasoucre -->
-<script>var spreadsheetID = "1cAti72QcHYbIuvufWIMWefHUV44Bobv3iXFkRVtpgJ0" ;</script>
+<script>var spreadsheetID = "1szAXNmStcBCYgF-Kxboj3yOarSCrHDFGu2zMsEQgL2o" ;</script>
 
 <!-- sementic -->
 <script src="Semantic-UI/semantic.min.js"></script>
@@ -24,7 +24,7 @@
 <style> 
 		@import url(css/widgets_modified.css);
 		html, body, #cesiumContainer {
-          width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
+          width: 100%; height: 95%; margin: 0; padding: 0; overflow: hidden;
       }
 </style>
 
@@ -41,38 +41,35 @@
   		</div>
 		<!-- --------- Main UI --------- -->
   		
-  		<div class="ui fixed grid" style="height: 100%;padding-top: 52.625;">
-			
-				<!-- --------- Data-Table --------- -->
-  				<div  class="eight wide column">
-  				
-  					<!-- --------- Tab_1 UI--------- -->
-  					<div class="ui top attached tabular menu" id="tab_1">
-  						<a class="active item" data-tab="first" data-vivaldi-spatnav-clickable="1">First</a>
- 						<a class="item" data-tab="second" data-vivaldi-spatnav-clickable="1">Second</a>
- 						<a class="item" data-tab="third" data-vivaldi-spatnav-clickable="1">Third</a>
+  			<div class="ui fixed grid" style="height: 100%;padding-top: 62.625;">
+
+
+					<!-- --------- Tab_1 UI--------- -->
+					<div class="ui top attached tabular menu" id="tab_1">
+						<a class="active item" data-tab="first" data-vivaldi-spatnav-clickable="1">First</a>
+						<a class="item" data-tab="second" data-vivaldi-spatnav-clickable="1">Second</a>
 					</div>
-					
+
 					<div class="ui bottom attached active tab segment" data-tab="first">
-  						<div id="table_div"></div>
-						<!-- button -->
-						<button class="ui primary button" button onclick="table(),earth_initialize.load_earth_data()">Reload</button>
-						<button class="ui primary button" button onclick="table(),table.JSON_save()">Save</button>
-						
+						<!-- --------- Data-Table --------- -->
+						<div class="ui fixed grid" style="height: 100%;">
+							<div  class="eight wide column">
+								<div id="table_div"></div>
+								<!-- button -->
+								<button class="ui primary button" button onclick="table(),earth_initialize.load_earth_data()">Reload</button>
+								<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1szAXNmStcBCYgF-Kxboj3yOarSCrHDFGu2zMsEQgL2o&font=Default&lang=en&initial_zoom=2&height=450' width='100%' height='450' frameborder='0'></iframe>
+							</div>
+
+							<!-- --------- Earth --------- -->
+							<div  class="eight wide column">
+								<div id="cesiumContainer"></div>
+							</div>
+						</div>
 					</div>
 					<div class="ui bottom attached tab segment" data-tab="second">
-  						<!-- <iframe width='100%' height='1000' frameborder='0' src='https://docs.google.com/spreadsheets/d/1cAti72QcHYbIuvufWIMWefHUV44Bobv3iXFkRVtpgJ0/edit'></iframe> --!>
+						<iframe width='100%' height='95%' frameborder='0' src='https://docs.google.com/spreadsheets/d/1szAXNmStcBCYgF-Kxboj3yOarSCrHDFGu2zMsEQgL2o/edit'></iframe>
 					</div>
-					<div class="ui bottom attached tab segment" data-tab="third">
- 						 Third
-					</div>	
-					
-				</div>
-  			
-  				<!-- --------- Earth --------- -->
-  				<div  class="eight wide column">	
-  			 		<div id="cesiumContainer"></div>
- 				</div>
+
 
 			</div>
   		</div>
@@ -84,13 +81,11 @@
 
 <script>
 
-		// Tab_1 UI
- 		$('#tab_1.menu .item').tab();
-
- 		//earth_initialize();
+ 		earth_initialize();
  		table();
  		
- 	
+ 		// Tab_1 UI
+ 		$('#tab_1.menu .item').tab();
  		
 </script>
 

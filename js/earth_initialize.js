@@ -32,9 +32,12 @@ function earth_initialize()
 					viewer.entities.removeAll();//clear all data
 					for (i = 0; i< json.object.length; i++)//loop through JSON
 					{
-						var new_data_name = json.object[i].name;
-						var new_location = json.object[i].location.split(',');
-					
+
+						console.log(json.object[i]);
+                        var new_location = json.object[i].location.split(',');
+						var new_data_name = json.object[i].headline;
+
+
 						if(json.object[i].type == "event"){create_event(new_data_name, new_location);}
 					
 					
@@ -47,7 +50,7 @@ function earth_initialize()
         	function create_event(new_data_name, new_location)
         		{
         		var redPolygon = viewer.entities.add(
-        							{name : new_data_name, 
+        							{name : new_data_name,
         							polygon : {hierarchy : Cesium.Cartesian3.fromDegreesArray(new_location),
         							material : Cesium.Color.RED}
 									});

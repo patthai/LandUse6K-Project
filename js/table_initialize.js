@@ -32,7 +32,7 @@ function table()
 		 										{
 		 											table_output = table_output +"<tr>";
 		 										}
-		 									table_output = table_output + "<td contenteditable=\"true\" id=\"editor\">"+row_data+"</td>";
+		 									table_output = table_output + "<td>"+row_data+"</td>";
 		 									
 		 									if (count == num_parameter)// check if this is the ending of the cell
 		 										{
@@ -51,19 +51,6 @@ function table()
 
       			}
       			
-      		//EDITING TABLE
-      		//EDITING TABLE
-      		//EDITING TABLE
-			//EDITING TABLE
-
-        	document.getElementById("editor").addEventListener("input", function() { alert("input event fired");}, false);
-			
-			table.JSON_save = function JSON_save()
-				{
-			 	console.log(output_json);
-				} 
-			
-			
 
 
         
