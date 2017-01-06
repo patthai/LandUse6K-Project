@@ -1,4 +1,5 @@
 <html ng-app="LandUse6K">
+<link rel="stylesheet" href="css/vis.min.css">
 <header>
 <!-- external library -->
 <script src="js/jquery.min.js"></script>
@@ -7,7 +8,10 @@
 <script src="js/load_and_reformat_json.js"></script>
 
 <!-- Declaring datasoucre -->
-<script>var spreadsheetID = "1szAXNmStcBCYgF-Kxboj3yOarSCrHDFGu2zMsEQgL2o" ;</script>
+<script>
+	var spreadsheetID = "1szAXNmStcBCYgF-Kxboj3yOarSCrHDFGu2zMsEQgL2o" ;
+</script>
+
 
 <!-- sementic -->
 <script src="Semantic-UI/semantic.min.js"></script>
@@ -15,6 +19,12 @@
 
 <!-- table -->
 <script src="js/table_initialize.js"></script>
+
+
+<!-- timeline -->
+<script src="js/vis.min.js"></script>
+<link rel="stylesheet" href="css/vis.min.css">
+<script src="js/timeline.js"></script>
 
 <!-- earth -->
 <script src="https://cesiumjs.org/Cesium/Build/Cesium/Cesium.js"></script>
@@ -56,8 +66,9 @@
 							<div  class="eight wide column">
 								<div id="table_div"></div>
 								<!-- button -->
-								<button class="ui primary button" button onclick="table(),earth_initialize.load_earth_data()">Reload</button>
-								<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1szAXNmStcBCYgF-Kxboj3yOarSCrHDFGu2zMsEQgL2o&font=Default&lang=en&initial_zoom=2&height=450' width='100%' height='450' frameborder='0'></iframe>
+								<button class="ui primary button" button onclick="table(),earth_initialize.load_earth_data(),load_timeline.initiate_to_timeline()">Reload</button>
+								<!-- timeline -->
+								<div id="timeline"></div>
 							</div>
 
 							<!-- --------- Earth --------- -->
@@ -68,6 +79,7 @@
 					</div>
 					<div class="ui bottom attached tab segment" data-tab="second">
 						<iframe width='100%' height='95%' frameborder='0' src='https://docs.google.com/spreadsheets/d/1szAXNmStcBCYgF-Kxboj3yOarSCrHDFGu2zMsEQgL2o/edit'></iframe>
+
 					</div>
 
 
@@ -83,6 +95,7 @@
 
  		//earth_initialize();
  		table();
+        load_timeline();
  		
  		// Tab_1 UI
  		$('#tab_1.menu .item').tab();
