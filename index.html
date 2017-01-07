@@ -33,6 +33,9 @@
 	<!-- earth -->
 	<script src="https://cesiumjs.org/Cesium/Build/Cesium/Cesium.js"></script>
 	<script src="js/earth_initialize.js"></script>
+
+	<!-- onload -->
+	<script src="js/on_load.js"></script>
 </header>
 
 
@@ -61,31 +64,32 @@
   			<div class="ui fixed grid" style="height: 100%;padding-top: 62.625;">
 
 
-					<!-- --------- TAB UI--------- -->
-					<div class="ui top attached tabular menu" id="tab_1">
-						<a class="active item" data-tab="first" data-vivaldi-spatnav-clickable="1" button onclick="table(),timeline.timeline_load()">First</a>
-						<a class="item" data-tab="second" data-vivaldi-spatnav-clickable="1">Second</a>
-					</div>
+				<!-- --------- TAB UI--------- -->
+				<div class="ui top attached tabular menu" id="tab_1">
+					<a class="active item" data-tab="first" data-vivaldi-spatnav-clickable="1" button onclick="on_load()">First</a>
+					<a class="item" data-tab="second" data-vivaldi-spatnav-clickable="1">Second</a>
+				</div>
 
 				<!-- --------- TAB 1 --------- -->
 				<!-- --------- TAB 1 --------- -->
 				<!-- --------- TAB 1 --------- -->
 				<!-- --------- TAB 1 --------- -->
+
 				<div class="ui bottom attached active tab segment" data-tab="first">
 
 						<!-- --------- Data-Table --------- -->
 						<div class="ui fixed grid" style="height: 100%;">
 							<div  class="eight wide column">
 								<!-- Project selection  -->
-								<select class="ui fluid search dropdown" id="list_of_projects" button onclick="load_all_project.export_project_name()">
-								</select>
+								<div id="dropdown_project"></div>
+
+								<!-- button -->
+								<button class="ui primary button" button onclick="on_load()">Reload</button>
 
 
 								<!-- Table  -->
 								<div id="table_div"></div>
 
-								<!-- button -->
-								<button class="ui primary button" button onclick="table(),timeline.timeline_load()">Reload</button>
 								<!-- timeline -->
 								<div id="timeline"></div>
 							</div>
@@ -116,18 +120,11 @@
 
 
 <script>
-    	load_all_project();
- 		//earth_initialize();
-		table();
-        timeline();
+    	on_load();
 
-
- 		
  		// Tab_1 UI
  		$('#tab_1.menu .item').tab();
 
-
- 		
 </script>
 
 
