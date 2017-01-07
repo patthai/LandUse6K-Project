@@ -13,7 +13,7 @@ function table()
       			{
             		
             		//table header displayer
-            		table_output = "<table id=\"table\" class=\"ui inverted table\"><thead><tr>";
+            		table_output = "<table id=\"table\" class=\"ui table\"><thead><tr>";
             		$.each(output_json.object[0],function(i,item)// table item header
 		 				{
 		 				 	table_output = table_output + "<th>" + i + "</th>";

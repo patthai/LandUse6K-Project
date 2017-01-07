@@ -1,35 +1,40 @@
 <html ng-app="LandUse6K">
 <link rel="stylesheet" href="css/vis.min.css">
 <header>
-<!-- external library -->
-<script src="js/jquery.min.js"></script>
 
-<!-- reformat JSON from google sheet-->
-<script src="js/load_and_reformat_json.js"></script>
+	<!-- external library -->
+	<script src="js/jquery.min.js"></script>
 
-<!-- Declaring datasoucre -->
-<script>
+	<!-- sementic -->
+	<script src="Semantic-UI/semantic.min.js"></script>
+	<link rel="stylesheet" href="Semantic-UI/semantic.min.css">
+
+	<!-- reformat JSON from google sheet-->
+	<script src="js/load_and_reformat_json.js"></script>
+
+	<!-- project selection -->
+	<script src="js/project_selection.js">
+	</script>
+
+	<!-- Declaring datasoucre -->
+	<script>
 	var spreadsheetID = "1szAXNmStcBCYgF-Kxboj3yOarSCrHDFGu2zMsEQgL2o" ;
-</script>
+	</script>
 
 
-<!-- sementic -->
-<script src="Semantic-UI/semantic.min.js"></script>
-<link rel="stylesheet" href="Semantic-UI/semantic.min.css">
+	<!-- table -->
+	<script src="js/table_initialize.js"></script>
 
-<!-- table -->
-<script src="js/table_initialize.js"></script>
+	<!-- timeline -->
+	<script src="js/vis.min.js"></script>
+	<link rel="stylesheet" href="css/vis.min.css">
+	<script src="js/timeline.js"></script>
 
-
-<!-- timeline -->
-<script src="js/vis.min.js"></script>
-<link rel="stylesheet" href="css/vis.min.css">
-<script src="js/timeline.js"></script>
-
-<!-- earth -->
-<script src="https://cesiumjs.org/Cesium/Build/Cesium/Cesium.js"></script>
-<script src="js/earth_initialize.js"></script>
+	<!-- earth -->
+	<script src="https://cesiumjs.org/Cesium/Build/Cesium/Cesium.js"></script>
+	<script src="js/earth_initialize.js"></script>
 </header>
+
 
 <style> 
 		@import url(css/widgets_modified.css);
@@ -50,21 +55,35 @@
    			</div>
   		</div>
 		<!-- --------- Main UI --------- -->
+
+
   		
   			<div class="ui fixed grid" style="height: 100%;padding-top: 62.625;">
 
 
-					<!-- --------- Tab_1 UI--------- -->
+					<!-- --------- TAB UI--------- -->
 					<div class="ui top attached tabular menu" id="tab_1">
 						<a class="active item" data-tab="first" data-vivaldi-spatnav-clickable="1" button onclick="table(),timeline.timeline_load()">First</a>
 						<a class="item" data-tab="second" data-vivaldi-spatnav-clickable="1">Second</a>
 					</div>
 
-					<div class="ui bottom attached active tab segment" data-tab="first">
+				<!-- --------- TAB 1 --------- -->
+				<!-- --------- TAB 1 --------- -->
+				<!-- --------- TAB 1 --------- -->
+				<!-- --------- TAB 1 --------- -->
+				<div class="ui bottom attached active tab segment" data-tab="first">
+
 						<!-- --------- Data-Table --------- -->
 						<div class="ui fixed grid" style="height: 100%;">
 							<div  class="eight wide column">
+								<!-- Project selection  -->
+								<select class="ui fluid search dropdown" id="list_of_projects" button onclick="load_all_project.export_project_name()">
+								</select>
+
+
+								<!-- Table  -->
 								<div id="table_div"></div>
+
 								<!-- button -->
 								<button class="ui primary button" button onclick="table(),timeline.timeline_load()">Reload</button>
 								<!-- timeline -->
@@ -77,6 +96,11 @@
 							</div>
 						</div>
 					</div>
+				<!-- --------- TAB 2 --------- -->
+				<!-- --------- TAB 2 --------- -->
+				<!-- --------- TAB 2 --------- -->
+				<!-- --------- TAB 2 --------- -->
+
 					<div class="ui bottom attached tab segment" data-tab="second">
 						<iframe width='100%' height='95%' frameborder='0' src='https://docs.google.com/spreadsheets/d/1szAXNmStcBCYgF-Kxboj3yOarSCrHDFGu2zMsEQgL2o/edit'></iframe>
 
@@ -86,20 +110,23 @@
 			</div>
   		</div>
 
-	
 </body>
+
 </html>
 
 
 <script>
-
+    	load_all_project();
  		//earth_initialize();
- 		table();
+		table();
         timeline();
+
 
  		
  		// Tab_1 UI
  		$('#tab_1.menu .item').tab();
+
+
  		
 </script>
 
