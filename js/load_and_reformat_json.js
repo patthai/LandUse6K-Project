@@ -1,6 +1,6 @@
 
 function load_and_reformat_sheet_json(func){
-var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/1/public/basic?alt=json";
+var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/"+ select_project +"/public/basic?alt=json";
 var output_json = "{\"object\":[";// Initiate output JSON
 var found_semicolon = "false";
 

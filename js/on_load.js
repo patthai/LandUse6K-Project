@@ -1,6 +1,9 @@
 function on_load()
 {
     load_all_project();
+    table();
+    timeline();
+    //earth_initialize();
 
 
 
@@ -9,6 +12,8 @@ function on_load()
 function load_ui()
 {
     table();
-    timeline();
-    //earth_initialize();
+    timeline.timeline_load();
+    //earth_initialize.load_earth_data();
+    console.log("HEE");
+
 }

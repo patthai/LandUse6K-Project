@@ -15,7 +15,7 @@ function load_all_project() {
             url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/" + sheet + "/public/basic?alt=json";
             $.getJSON(url, function (data) // Get JSON from google sheet
             {
-                project_lists = project_lists + "<option>" + data.feed.title.$t + "</option>";
+                project_lists = project_lists + "<option>"+ data.feed.title.$t + "</option>";
                 sheet++;
                 load_all_project.loop_project();
 
