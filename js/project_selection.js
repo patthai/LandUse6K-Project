@@ -9,7 +9,7 @@ function load_all_project() {
 
         sheet = 1;
         $('#project_choices').remove();
-        $('#dropdown_project').append("<select class=\"ui fluid search dropdown\"id =\"project_choices\"><option>Select project</option></select>");
+        $('#dropdown_project').append("<select class=\"ui fluid search dropdown\"id =\"project_choices\"  ><option>Select project</option></select>");
         project_lists="";
 
         load_all_project.loop_project = function loop_project() {
@@ -51,6 +51,10 @@ function load_all_project() {
 
 
     }});
+
+    $('.ui.dropdown')
+        .dropdown('toggle')
+    ;
 
 }
 
