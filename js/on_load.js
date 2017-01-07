@@ -11,6 +11,7 @@ function on_load()
 
 function load_ui()
 {
+    load_all_project.load_project();
     table();
     timeline.timeline_load();
     //earth_initialize.load_earth_data();

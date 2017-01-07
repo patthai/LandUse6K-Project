@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="288d8173-1064-4a94-935f-febe6d9d82e1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/load_and_reformat_json.js" afterPath="$PROJECT_DIR$/js/load_and_reformat_json.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/on_load.js" afterPath="$PROJECT_DIR$/js/on_load.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/project_selection.js" afterPath="$PROJECT_DIR$/js/project_selection.js" />
     </list>
@@ -27,7 +25,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
@@ -50,21 +48,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="project_selection.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/project_selection.js">
+      <file leaf-file-name="on_load.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/on_load.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="56" lean-forward="false" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
+            <state relative-caret-position="195">
+              <caret line="13" column="36" lean-forward="false" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="on_load.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/on_load.js">
+      <file leaf-file-name="project_selection.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/project_selection.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+            <state relative-caret-position="255">
+              <caret line="17" column="80" lean-forward="false" selection-start-line="17" selection-start-column="80" selection-end-line="17" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -100,9 +98,9 @@
         <option value="$PROJECT_DIR$/js/table_initialize.js" />
         <option value="$PROJECT_DIR$/on_load.js" />
         <option value="$PROJECT_DIR$/js/load_and_reformat_json.js" />
-        <option value="$PROJECT_DIR$/js/project_selection.js" />
-        <option value="$PROJECT_DIR$/js/on_load.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/on_load.js" />
+        <option value="$PROJECT_DIR$/js/project_selection.js" />
       </list>
     </option>
   </component>
@@ -283,12 +281,12 @@
       <option name="presentableId" value="Default" />
       <updated>1483602716360</updated>
       <workItem from="1483602718380" duration="2909000" />
-      <workItem from="1483670756881" duration="23452000" />
+      <workItem from="1483670756881" duration="26421000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26361000" />
+    <option name="totallyTimeSpent" value="29330000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -398,11 +396,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/project_selection.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="56" lean-forward="false" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
-          <folding />
+        <state relative-caret-position="210">
+          <caret line="92" column="58" lean-forward="false" selection-start-line="92" selection-start-column="58" selection-end-line="92" selection-end-column="58" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -416,20 +417,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/on_load.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        <state relative-caret-position="195">
+          <caret line="13" column="36" lean-forward="false" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/project_selection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="92" column="58" lean-forward="false" selection-start-line="92" selection-start-column="58" selection-end-line="92" selection-end-column="58" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="17" column="80" lean-forward="false" selection-start-line="17" selection-start-column="80" selection-end-line="17" selection-end-column="80" />
+          <folding />
         </state>
       </provider>
     </entry>

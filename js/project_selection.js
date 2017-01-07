@@ -8,14 +8,15 @@ function load_all_project() {
     {
         sheet = 1;
         $('#project_choices').remove();
-        $('#dropdown_project').append("<select class=\"ui fluid search dropdown\"id =\"project_choices\"></select>");
+        $('#dropdown_project').append("<select class=\"ui fluid search dropdown\"id =\"project_choices\"><option>Select project</option></select>");
         project_lists="";
 
         load_all_project.loop_project = function loop_project() {
             url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/" + sheet + "/public/basic?alt=json";
             $.getJSON(url, function (data) // Get JSON from google sheet
             {
-                project_lists = project_lists + "<option>"+ data.feed.title.$t + "</option>";
+                project_lists = project_lists + "<option value=\"" + sheet + "\">"+ data.feed.title.$t + "</option>";
+
                 sheet++;
                 load_all_project.loop_project();
 
@@ -42,7 +43,18 @@ function load_all_project() {
 
     load_all_project.load_project();
 
+    $(".ui.dropdown").dropdown({onChange:function(value,text){
 
+        var pp = $('.ui.dropdown').dropdown('get value');
+        console.log(pp);
+
+    }});
 
 }
+
+
+
+
+
+
 
