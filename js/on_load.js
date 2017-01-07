@@ -9,12 +9,14 @@ function on_load()
 
 }
 
-function load_ui()
+function load_ui(project_id)
 {
-    load_all_project.load_project();
+    select_project = project_id;
+    //load_all_project.load_project();
     table();
     timeline.timeline_load();
     //earth_initialize.load_earth_data();
-    console.log("HEE");
+    console.log(select_project);
+
 
 }

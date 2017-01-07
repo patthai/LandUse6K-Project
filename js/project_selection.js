@@ -6,6 +6,7 @@ function load_all_project() {
 
     load_all_project.load_project = function load_project()
     {
+
         sheet = 1;
         $('#project_choices').remove();
         $('#dropdown_project').append("<select class=\"ui fluid search dropdown\"id =\"project_choices\"><option>Select project</option></select>");
@@ -25,7 +26,6 @@ function load_all_project() {
                     //console.log('getJSON request succeeded!');
                 })
                 .fail(function(jqXHR, textStatus, errorThrown) {
-                    console.log(project_lists);
                     $('#project_choices').append(project_lists);
 
                 })
@@ -43,10 +43,12 @@ function load_all_project() {
 
     load_all_project.load_project();
 
-    $(".ui.dropdown").dropdown({onChange:function(value,text){
 
-        var pp = $('.ui.dropdown').dropdown('get value');
-        console.log(pp);
+
+    $(".ui.dropdown").dropdown({onChange:function(value,text){
+        var project_id = $('.ui.dropdown').dropdown('get value');
+        load_ui(project_id);
+
 
     }});
 
