@@ -7,8 +7,8 @@ function load_all_project() {
     load_all_project.load_project = function load_project()
     {
 
-        sheet = 1;
         $('#project_choices').remove();
+        sheet = 1;
         $('#dropdown_project').append("<select class=\"ui fluid search dropdown\"id =\"project_choices\"  ><option>Select project</option></select>");
         project_lists="";
 
@@ -52,9 +52,7 @@ function load_all_project() {
 
     }});
 
-    $('.ui.dropdown')
-        .dropdown('toggle')
-    ;
+
 
 }
 

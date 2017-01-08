@@ -6,14 +6,16 @@ var found_semicolon = "false";
 
  $.getJSON(url, function(data) // Get JSON from google sheet
  	{
-		
+		var id = 0;
+		console.log(data);
 		 $.each(data.feed.entry,function(i,column_data) // penetrate each row
 		 	
 		 {
 
-		    output_json = output_json+"{";
-		   
-		
+		    output_json = output_json+"{ \"id\":\""+id+"\",";
+		    id ++;
+
+
 		 	//<-----converting column_data to string------>
 		 	var item_string = column_data.content.$t;
 
@@ -52,9 +54,9 @@ var found_semicolon = "false";
 		//EXPORT JSON TEST
 		
 		var json = JSON.parse(output_json);
-
 		//return JSON object to the given callback function
 		func(json);
+		id = 0;
 		
 		
  	});

@@ -16,7 +16,5 @@ function load_ui(project_id)
     table();
     timeline.timeline_load();
     //earth_initialize.load_earth_data();
-    console.log(select_project);
-
 
 }
