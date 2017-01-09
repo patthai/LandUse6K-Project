@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="288d8173-1064-4a94-935f-febe6d9d82e1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/earth_initialize.js" afterPath="$PROJECT_DIR$/js/earth_initialize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/load_description.js" afterPath="$PROJECT_DIR$/js/load_description.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/on_load.js" afterPath="$PROJECT_DIR$/js/on_load.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/timeline.js" afterPath="$PROJECT_DIR$/js/timeline.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,21 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="timeline.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/timeline.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
-              <caret line="46" column="22" lean-forward="false" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="earth_initialize.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="earth_initialize.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/earth_initialize.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="66" column="28" lean-forward="false" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+            <state relative-caret-position="832">
+              <caret line="108" column="96" lean-forward="false" selection-start-line="108" selection-start-column="96" selection-end-line="108" selection-end-column="96" />
               <folding />
             </state>
           </provider>
@@ -114,8 +99,8 @@
         <option value="$PROJECT_DIR$/js/load_description.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/on_load.js" />
-        <option value="$PROJECT_DIR$/js/earth_initialize.js" />
         <option value="$PROJECT_DIR$/js/timeline.js" />
+        <option value="$PROJECT_DIR$/js/earth_initialize.js" />
       </list>
     </option>
   </component>
@@ -126,10 +111,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="40" />
-    <option name="y" value="149" />
+    <option name="x" value="126" />
+    <option name="y" value="136" />
     <option name="width" value="1626" />
-    <option name="height" value="959" />
+    <option name="height" value="986" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -221,7 +206,10 @@
       <recent name="$PROJECT_DIR$/js" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LandUse6K-Project/index.html">
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
@@ -281,6 +269,14 @@
       <recursive>false</recursive>
       <method />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -299,12 +295,12 @@
       <workItem from="1483670756881" duration="43353000" />
       <workItem from="1483928445828" duration="4040000" />
       <workItem from="1483934285760" duration="523000" />
-      <workItem from="1483945150247" duration="2681000" />
+      <workItem from="1483945150247" duration="6583000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53506000" />
+    <option name="totallyTimeSpent" value="57408000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -316,7 +312,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="40" y="149" width="1626" height="959" extended-state="0" />
+    <frame x="126" y="136" width="1626" height="986" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21525215" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -476,6 +472,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/timeline.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="46" column="22" lean-forward="false" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="23" column="27" lean-forward="false" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/on_load.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -492,26 +504,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="23" column="27" lean-forward="false" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/earth_initialize.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="66" column="28" lean-forward="false" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/timeline.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="46" column="22" lean-forward="false" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+        <state relative-caret-position="832">
+          <caret line="108" column="96" lean-forward="false" selection-start-line="108" selection-start-column="96" selection-end-line="108" selection-end-column="96" />
           <folding />
         </state>
       </provider>
