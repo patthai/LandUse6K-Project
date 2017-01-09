@@ -43,6 +43,11 @@ function timeline() {
                     var select_item = all[get_id];
                     description(select_item.id);
 
+                    //for earth
+                    //console.log("b_start = " + select_item.start + "b_end = " + select_item.end);
+                    earth_initialize.load_earth_boundary(select_item.start,select_item.end);
+                    //earth_initialize.flyto();
+
                 });
                 timeline.on('select', onSelect);
 

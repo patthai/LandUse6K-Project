@@ -26,7 +26,7 @@ function description(select_item_id)
         description_output = description_output + "</tbody></table>";
 
         $('#description_div').append(description_output);
-        console.log(description_output);
+        //console.log(description_output);
 
     }
 
