@@ -1,0 +1,13 @@
+.overflow_content
+{
+    height:400px;
+    overflow:auto;
+    background:#fff;
+}
+
+.overflow_content_fullheight
+{
+    height:120%;
+    overflow:auto;
+    background:#fff;
+}

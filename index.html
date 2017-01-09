@@ -1,5 +1,7 @@
 <html ng-app="LandUse6K">
 <link rel="stylesheet" href="css/vis.min.css">
+<link rel="stylesheet" href="css/additional_css.css">
+
 <header>
 
 	<!-- external library -->
@@ -64,33 +66,50 @@
   			<div class="ui fixed grid" style="height: 100%;padding-top: 62.625;">
 
 
-				<!-- --------- TAB UI--------- -->
-				<div class="ui top attached tabular menu" id="tab_1">
-					<a class="active item" data-tab="first" data-vivaldi-spatnav-clickable="1" button onclick="load_ui(select_project)">First</a>
-					<a class="item" data-tab="second" data-vivaldi-spatnav-clickable="1">Second</a>
+				<!-- --------- Main_tab--------- -->
+				<div class="ui top attached tabular menu" id="main_tab">
+					<a class="active item" data-tab="visualizer" data-vivaldi-spatnav-clickable="1" button onclick="load_ui(select_project)">Visualizer</a>
+					<a class="item" data-tab="editor" data-vivaldi-spatnav-clickable="1">Data Editor</a>
 				</div>
 
-				<!-- --------- TAB 1 --------- -->
-				<!-- --------- TAB 1 --------- -->
-				<!-- --------- TAB 1 --------- -->
-				<!-- --------- TAB 1 --------- -->
+				<!-- --------- Visualizer Tab --------- -->
 
-				<div class="ui bottom attached active tab segment" data-tab="first">
-
+				<div class="ui bottom attached active tab segment" data-tab="visualizer">
+					<div class="overflow_content_fullheight">
 						<!-- --------- Data-Table --------- -->
 						<div class="ui fixed grid" style="height: 100%;">
-							<div  class="eight wide column">
+							<div  class="eight wide column" style="padding-left: 24px;">
+
+
+
 								<!-- Project selection  -->
 								<div id="dropdown_project"></div>
-
-								<!-- button -->
-								<button class="ui primary button" button onclick="load_ui(select_project)">Reload</button>
 
 								<!-- timeline -->
 								<div id="timeline_div"></div>
 
-								<!-- Table  -->
-								<div id="table_div"></div>
+
+								<!-- --------- TAB UI--------- -->
+								<div class="ui top attached tabular menu" id="data_tab">
+									<a class="active item" data-tab="partial_data" data-vivaldi-spatnav-clickable="1">Current event</a>
+									<a class="item" data-tab="all_data" data-vivaldi-spatnav-clickable="1">All events</a>
+								</div>
+
+
+								<div class="ui bottom attached tab segment" data-tab="partial_data">
+
+
+								</div>
+
+								<div class="ui bottom attached tab segment" data-tab="all_data">
+
+									<!-- Table  -->
+									<div class="overflow_content">
+										<div id="table_div"></div>
+									</div>
+
+								</div>
+
 							</div>
 
 							<!-- --------- Earth --------- -->
@@ -99,15 +118,13 @@
 							</div>
 						</div>
 					</div>
-				<!-- --------- TAB 2 --------- -->
-				<!-- --------- TAB 2 --------- -->
-				<!-- --------- TAB 2 --------- -->
-				<!-- --------- TAB 2 --------- -->
+				</div>
+				<!-- --------- Editor Tab--------- -->
 
-					<div class="ui bottom attached tab segment" data-tab="second">
+				<div class="ui bottom attached tab segment" data-tab="editor">
 						<iframe width='100%' height='95%' frameborder='0' src='https://docs.google.com/spreadsheets/d/1szAXNmStcBCYgF-Kxboj3yOarSCrHDFGu2zMsEQgL2o/edit'></iframe>
 
-					</div>
+				</div>
 
 
 			</div>
@@ -122,7 +139,8 @@
     	on_load();
 
  		// Tab_1 UI
- 		$('#tab_1.menu .item').tab();
+ 		$('#main_tab.menu .item').tab();
+        $('#data_tab.menu .item').tab();
 
 </script>
 

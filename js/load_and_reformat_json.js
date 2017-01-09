@@ -7,7 +7,6 @@ var found_semicolon = "false";
  $.getJSON(url, function(data) // Get JSON from google sheet
  	{
 		var id = 0;
-		console.log(data);
 		 $.each(data.feed.entry,function(i,column_data) // penetrate each row
 		 	
 		 {

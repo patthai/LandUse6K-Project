@@ -19,7 +19,8 @@ function table()
 		 				 	table_output = table_output + "<th>" + i + "</th>";
 		 				});
 		 					table_output = table_output + "</tr></thead>";
-					
+
+
 					//content displayer 
 					for (i = 0; i< output_json.object.length; i++)
       								{
