@@ -18,7 +18,7 @@ function timeline() {
             {
 
                 var id = json.object[i].id;
-                var title = json.object[i].headline;
+                var title = json.object[i].title;
                 var start_year = json.object[i].year;
                 var end_year = json.object[i].endyear;
 
@@ -41,7 +41,7 @@ function timeline() {
                     var get_id = properties.items[0];
                     var all = items.get();
                     var select_item = all[get_id];
-                    console.log(select_item);
+                    description(select_item.id);
 
                 });
                 timeline.on('select', onSelect);

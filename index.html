@@ -27,14 +27,18 @@
 	<!-- table -->
 	<script src="js/table_initialize.js"></script>
 
+	<!-- description -->
+	<script src="js/load_description.js"></script>
+
+	<!-- earth -->
+	<script src="https://cesiumjs.org/Cesium/Build/Cesium/Cesium.js"></script>
+	<script src="js/earth_initialize.js"></script>
+
 	<!-- timeline -->
 	<script src="js/vis.min.js"></script>
 	<link rel="stylesheet" href="css/vis.min.css">
 	<script src="js/timeline.js"></script>
 
-	<!-- earth -->
-	<script src="https://cesiumjs.org/Cesium/Build/Cesium/Cesium.js"></script>
-	<script src="js/earth_initialize.js"></script>
 
 	<!-- onload -->
 	<script src="js/on_load.js"></script>
@@ -96,7 +100,11 @@
 								</div>
 
 
-								<div class="ui bottom attached tab segment" data-tab="partial_data">
+								<div class="ui bottom attached active tab segment" data-tab="partial_data">
+
+									<!-- Description  -->
+									<div class="overflow_content" id="description_div">
+									</div>
 
 
 								</div>
@@ -104,9 +112,8 @@
 								<div class="ui bottom attached tab segment" data-tab="all_data">
 
 									<!-- Table  -->
-									<div class="overflow_content">
-										<div id="table_div"></div>
-									</div>
+									<div  class="overflow_content"id="table_div"></div>
+
 
 								</div>
 
