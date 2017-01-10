@@ -135,7 +135,13 @@ function earth_initialize()
               console.log(target);
               viewer.camera.flyTo(target,{duration : 20.0});
           }
+			
+			///////////////////Fly home///////////////////////////
 
+          earth_initialize.flyhome = function flyhome() {
+
+              viewer.camera.flyHome();
+          }
 
 
 
