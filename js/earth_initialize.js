@@ -29,9 +29,10 @@ function earth_initialize()
                       var new_location = json.object[i].location.split(',');
                       var new_data_name = json.object[i].title;
                       var new_id = json.object[i].id;
+                      var new_class = json.object[i].class;
 
-                      if(json.object[i].type == "area"){create_area(new_data_name, new_location,new_id);}
-					  else if(json.object[i].type == "point"){create_point(new_data_name, new_location,new_id);}
+                      if(json.object[i].type == "area"){create_area(new_data_name, new_location,new_id, new_class);}
+					  else if(json.object[i].type == "point"){create_point(new_data_name, new_location,new_id, new_class);}
 
           }
 
@@ -80,19 +81,46 @@ function earth_initialize()
 			/////////////////Different models////////////////
           	/////////////////Different models////////////////
 			/////////////////Different models////////////////
-        	function create_area(new_data_name, new_location, new_id)
+        	function create_area(new_data_name, new_location, new_id, new_class)
         		{
-        		var object_item = viewer.entities.add(
-        							{name : new_data_name,
-        							polygon : {hierarchy : Cesium.Cartesian3.fromDegreesArray(new_location),
-        							material : Cesium.Color.RED},
-									id : new_id
-									});
-				}
+
+        			if (new_class == "agriculture")
+        			{
+                        var object_item = viewer.entities.add(
+                            {name : new_data_name,
+                                polygon : {hierarchy : Cesium.Cartesian3.fromDegreesArray(new_location),
+                                    material : Cesium.Color.GREEN.withAlpha(0.6)},
+                                id : new_id
+                            });
+                    }
+
+					else if (new_class == "city")
+					{
+                        var object_item = viewer.entities.add(
+                            {name : new_data_name,
+                                polygon : {hierarchy : Cesium.Cartesian3.fromDegreesArray(new_location),
+                                    material : Cesium.Color.BLUE.withAlpha(0.6)},
+                                id : new_id
+                            });
+                    }
+
+                else
+                    {
+                        var object_item = viewer.entities.add(
+                            {name : new_data_name,
+                                polygon : {hierarchy : Cesium.Cartesian3.fromDegreesArray(new_location),
+                                    material : Cesium.Color.RED.withAlpha(0.6)},
+                                id : new_id
+                            });
+                    }
+
+
+					}
 
 
 
-          	function create_point(new_data_name, new_location, new_id)
+
+          	function create_point(new_data_name, new_location, new_id, new_class)
           	{
 
           		var new_location_process = new_location;
